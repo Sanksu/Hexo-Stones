@@ -1,1 +1,8 @@
-theme: jekyll-theme-minimal
+title: Stones
+avatar: https://sanksu.top/img/avatar.png
+author: Sanksu
+description: Just to do
+
+menus: 
+  主页: /
+  关于: /about
