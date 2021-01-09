@@ -1,0 +1,18 @@
+<div id="post-list">
+  <div id="post-box">
+    <header class="article-title">
+      <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+      <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'YYYY MMM D'}) %>
+      <div class="article-digest">
+        <% if (post.excerpt){ %>
+          <%- post.excerpt %>
+        <% } else { %>
+          <%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 20) %>
+          ...
+        <% } %>
+      </div>
+      <a class="article-read" href="<%- config.root %><%- post.path %>"> 阅读全文 </a>
+      <%- partial('post/tag', {class_name: 'archive-article-tag'}) %>
+    </header>
+  </div>
+</div>

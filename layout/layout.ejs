@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%- theme.title %></title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8">
+	<title>
+		<%- theme.title %>
+	</title>
+	<link rel="icon" href="<%- theme.favicon %>">
+	<!-- 引入代码高亮的 js -->
+	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<!-- 引入代码高亮 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/tomorrow-night.min.css" type="text/css">
 
+		<!-- 引入配置文件 -->
+		<%- css('css/main.css') %>
 
-	<!-- 引入配置文件 -->
-	<%- css('css/main.css') %>
+			<!-- 字体图片库 -->
+			<script src="https://use.fontawesome.com/c026a466e4.js"></script>
 
-	<!-- 字体图片库 -->
-	<%- css('lib/font-awesome/css/font-awesome.min.css') %>
-	
 </head>
 <body>
 	<div id="main">
@@ -23,10 +31,26 @@
 
 		<!-- 引入正文 -->
 		<div id="wrapper">
-			<%- body %>
+			<section id="site-intro">
+				<a href="/"> 
+					<img src="<%- theme.avatar %>" class="circle" width="200" alt="Sanksu"> 
+				</a>
+				<header>
+					<h1><%- theme.author %></h1>
+				</header>
+				<main>
+					<p>
+						<%- theme.description %>
+					</p>
+				</main>
+				<%- partial('_widget/tagcloud') %>
+				<%- partial('_widget/category') %>
+				<%- partial('_partial/footer') %>
+			</section>
+			<main id="site-main">
+				<%- body %>
+				  </div>
+			</main>
 		</div>
-		
-	</div>
-
 </body>
 </html>

@@ -1,8 +1,26 @@
-title: Stones
+title: Hexo-theme-Stones
+favicon: https://sanksu.top/img/avatar.png
 avatar: https://sanksu.top/img/avatar.png
 author: Sanksu
 description: Just to do
+indexdescription: I'm Sanksu.
+Subtitle: This is my blog.Hello!
 
 menus: 
   主页: /
-  关于: /about
+  归档: /archives
+
+valine:
+  appid: 2L6J5ef5FGTN4Mc6ALxrB9uj-MdYXbMMI  # 从 LeanCloud 的应用中得到的 appId
+  appkey: qRjo2mqeQP6tbo3mYA09c5Ml # 从 LeanCloud 的应用中得到的 APP Key
+  placeholder: 说点什么叭！填写邮箱可以获得 Gravatar 头像和回复通知哦！ # 评论框占位提示符
+  path: window.location.pathname # 当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
+  meta: ['nick', 'mail', 'link']  # 评论者相关属性
+  pageSize: 5 # 评论列表分页，每页条数
+  lang: zh-CN # zh-CN | zh-TW | en | ja
+  highlight: true # 代码高亮
+  recordIP: true # 是否记录评论者IP
+  notify: true
+  verify: true
+  visitor: true
+  serverURLs:  # REST API 服务器地址，国际版不填

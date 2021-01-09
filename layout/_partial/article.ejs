@@ -6,3 +6,11 @@
 <div id="article">
 	<%- page.content %>
 </div>
+<article>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+<article class="comments" id="comments">
+  <%- partial('comments/valine') %>
+</article>

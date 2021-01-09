@@ -1,36 +1,6 @@
-<div id="wrapper">
-	<section id="site-intro">
-		<a href="/"> 
-			<img src="<%- theme.avatar %>" class="circle" width="100" alt="Sanksu"> 
-		</a>
-		<header>
-			<h1><%- theme.author %></h1>
-		</header>
-		<main>
-			<p>
-				<%- theme.description %>
-			</p>
-		</main>
-	</section>
-	<main id="site-main">
-		<div id="articleList">
-			<ul>
-				<% site.posts.forEach(function(post){ %>
-		
-					<li class="article-li">
-						<span class="article-date"><%- date(post.date, "YYYY-MM-DD") %></span>
-						<a class="article-read" href="<%- config.root %><%- post.path %>"> 阅读全文 </span>
-						<a class="article-title" href="<%- config.root %><%- post.path %>"><%- post.slug.split("/")[post.slug.split("/").length-1] %></a>
-						<div class="article-digest">
-							<%- post.more.replace(/<\/?.+?\/?>/g, "").substring(0, 100) %>
-							...
-						</div>
-					</li>
-					
-				<% }); %>
-			</ul>
-		</div>
-	</main>
-</div>
-
+			  <section class="intro-section">
+			  <div class="intro-content">
+				  <div class="intro-title"><%- theme.indexdescription %></div>
+				  <div class="intro-sub"><p><%- theme.Subtitle %></p>
+		  </div>
 
