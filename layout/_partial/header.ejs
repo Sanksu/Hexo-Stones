@@ -1,0 +1,9 @@
+<header class="header">
+    <img class="logo" src="<%- theme.favicon %>" alt="logo">
+    <a href="/"><%- theme.title %></a>
+    <nav class="menu">
+        <% for ( menu in theme.menus ) { %>
+                <a href="<%- theme.menus[menu] %>" class="hover-underline"><%- menu %></a>
+        <% } %>
+      </nav>
+  </header>

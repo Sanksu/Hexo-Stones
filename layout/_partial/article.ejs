@@ -1,16 +1,13 @@
-<div>
-	<span id="post-author"><%- theme.author %></span>
-	<span id="post-date"><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></span>
+<div id="article">
+  <div id="post-head">
+    <span id="post-title"><%- page.title %></span>
+    <span id="post-date"><%- date(page.date, "YYYY-MM-DD" ) %></span>
+  </div>
 </div>
 
 <div id="article">
 	<%- page.content %>
 </div>
-<article>
-  <% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
-</article>
 <article class="comments" id="comments">
   <%- partial('comments/valine') %>
 </article>

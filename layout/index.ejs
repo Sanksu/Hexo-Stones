@@ -1,6 +1,10 @@
-			  <section class="intro-section">
-			  <div class="intro-content">
-				  <div class="intro-title"><%- theme.indexdescription %></div>
-				  <div class="intro-sub"><p><%- theme.Subtitle %></p>
-		  </div>
+<div class="intro-title animate__animated  animate__fadeInLeft">
+	<%- theme.indexdescription %>
+</div>
+<div class="intro-sub animate__animated  animate__fadeInLeft">
+	<p>
+		<%- theme.Subtitle %>
+	</p>
+</div>
 
+<%- partial('_partial/home', {pagination: config.archive, index: true}) %>
