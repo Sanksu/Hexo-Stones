@@ -15,11 +15,10 @@ html {
 }
 
 body {
-    max-width: 680px;
+    max-width: 800px;
     padding: 0 14px;
     margin: 0 auto;
     display: block;
-    letter-spacing: 0.03em;
 }
 
 a {
@@ -49,6 +48,7 @@ a {
 
 .header a {
     color: rgb(255, 255, 255);
+    font-weight: 100;
 }
 
 .header .menu {
@@ -82,14 +82,14 @@ a {
 }
 
 .intro-sub{
-    font-weight: 1000;
+    font-weight: 100;
     margin: 0;
     padding: 0;
     color: rgb(177, 177, 177);
 }
 
 #post {
-    padding: 22px 0;
+    padding: 22px 0 22px;
 }
 
 .readmore {
@@ -127,6 +127,7 @@ a {
 }
 
 /* 主页 */
+
 /* 文章 */
 
 #article img {
@@ -151,6 +152,7 @@ a {
     position: absolute;
 }
 /* 文章 */
+
 /* 页码 */
 #page-nav {
     text-align: center;
@@ -171,6 +173,15 @@ a {
 }
 /* 页码 */
 
+/* 页脚 */
+#site-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: rgb(177, 177, 177);
+}
+/* 页脚 */
+
 /* 滑动条 */
 ::-webkit-scrollbar {
     width: 3px;
@@ -183,3 +194,9 @@ a {
 , Cyan 0%, Magenta 50%, Yellow 100%);
 }
 /* 滑动条 */
+
+
+.tags {
+    padding-left: 1rem;
+    border-left: 1px solid var(--main-border-color);
+}

@@ -15,7 +15,9 @@
 </head>
 <body ondragstart="return false;">
 	<%- partial('_partial/header', {post: page, index: false}) %>
+	<%- partial("_widget/tagcloud") %> 
 	<%- body %>
+	<%- partial('_partial/footer') %> 
 	<!-- 引入代码高亮的 js -->
 	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
